@@ -1,170 +1,88 @@
-
-#include <stdio.h>
-#include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int main(int argc, char *argv[]){
+//Macias Zuñiga Grecia Sofia mat: 1852097 horario: viernes 7:00am - 9:00am 6/09/2019
+//Practica 5
+int main(){
 	//Actividad 1
-	int x, y; //Inicializacion de dos variables tipo enteras
-	//Pedir al usuario por pantalla que ingrese dos numeros enteros diferentes 
-	printf("\n\tIngrese un numero entero:"); 
- scanf("%d", &x); //Captura del primer numeero entero
- printf("\n\tIngrese un segundo numero entero:");
- scanf("%d", &y); //Captura del segundo numero entero
- if(x>y){ //Condicion en la cual se verifica si el primer numero es mayor que el segundo
-	//Muestra en pantalla que el primer numero es mayor que el segundo numero 
- 	printf("\n\tEl primer numero ingresado %d es mayor al segundo %d", x, y);
+	int a; //Inicializacion de la  variable tipo entera
+	printf("\n\tIngrese la calificacion del alumno del 0 al 10:"); //Pide por pantalla que el usuario introduzca una calificacion entre 0 y 10
+	scanf("%d", &a); //Captura de la calificacion que el usuario a introducido
+	if(a>=5 && a<=10){ //Si algunas de las condiciones dadas es verdadero entrara al if si es que la condicion que se encuentra dentro se cumple
+		printf("\n\tEl alumno es APTO");//Muestra en pantalla que el alumno es apto 
 	}
-	else//si la condicion no se cumple hacer el siguente if
-	if(x<y){//Condicion en la cual se verifica si el segundo numero es mayor que el primero
-	//Muestra en pantalla que el segubdo numero es mayor que el primer numero 
-	printf("\n\tEl segundo numero ingresado %d es mayor al primero %d", y, x);
+	else//si el anterior if no se cumple con la calificacion dada, hara lo siguiente
+	if(a>=0 && a<5){//Si alguna de las condiciones dada es verdadero se hara lo que este dentro
+	printf("\n\tEl alumno NO APTO");//Muestra en pantalla que el alumno no es apto 
 }
+else//si ninguna de las anteriores condiciones se cumple hara lo siguiente
+printf("\n\tERROR: Nota incorrecta");//Muestra en pantalla que el numero ingresado no se encuentra en el rango
 
-else{ //si la condicion no se cumple hacer lo siguente
-	//Muestra en pantalla que el segubdo numero es mayor que el primer numero 
-printf("\n\tLos numeros ingresados %d y %d son iguales", x, y);
-}
+
 
 //Actividad 2
-int a=5, b=3, c=-12; //Inicializacion de las variables tipo enteras con numeros constantes
-//Muestra en pantalla cuales son las constantes y sus umeros ingresados
-printf("\n\n\n\n\tLas siguentes variables y sus constantes son: a=5, b=3 y c=-12");
-//Primera condicion, entrara solo si esta es verdadera
-if(a>3)
-	 //Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	 printf("\n\tEl numero %d es mayor a 3", a); 
-    
-  //segunda condicion, entrara solo si esta es verdadera
-if(a>c){
-		 //Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	  printf("\n\tEl numero %d es mayor a %d ", a, c);
-  }
-
-//tercera condicion, entrara solo si esta es verdadera
-if(b!=c)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	printf("\n\tEl numero %d y el numero %d son diferentes", b, c);
-
-//Cuarta condicion, entrara solo si esta es verdadera
-if(a==3)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	printf("\n\tEl numero %d es igual a 3", a);
-
-
-//Quinta condicion, entrara solo si esta es verdadera
-if(a*b==15)
-	//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-printf("\n\tLa multiplicacion de  %d y %d es igual a 15", a, b);
-	
-	
-	//Sexta condicion, entrara solo si esta es verdadera
-	//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-if(c/b<a)
-		printf("\n\tLa divicion de %d y %d es menor a %d", c, b, a);
-	
-	//septima condicion, entrara solo si esta es verdadera
-if(c/b==-10)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tLa divicion de %d y %d es igual a -10", c, b);
-
-
-	//octava condicion, entrara solo si esta es verdadera
-if(a+b+c==5)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tLa suma de %d, %d y %d es igual a 5", a, b, c);
-	
-	//novena condicion, entrara solo si esta es verdadera
-if(a+b==8 && a-b==2)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	 printf("\n\tla suma de %d y %d es igual a 8 ademas de la resta de %d y %d es igual a 2", a, b, a, b);
-
-
-	//decima condicion, entrara solo si esta es verdadera 
-if(a+b==8 || a-b==6 )
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tla suma de %d y %d es igual a 8 ademas de la resta de %d y %d es igual a 6", a, b, a, b);
-
-
-	//decimoprimera condicion, entrara solo si esta es verdadera
-	if(a>3 && b>3 && c<3)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tEl numero %d es mayor a 3, el numero %d es mayor a tres y el numero %c es menor a 3", a, b, c);
-	
-	
-//Actividad Extra
-int n, m, r; //Inicializacion de las variables tipo enteras 
-//Muetra en plantalla que el usuario ingrese los enteros
-printf("\n\n\n\n\tIngrese un numero entero:");
-scanf("%d", &n); //CAptura de datos
-printf("\n\tIngrese un numero entero:");
-scanf("%d", &m); //Captura de datos
-printf("\n\tIngrese un numero entero:");
-scanf("%d", &r); //Captura de datos
-//Primera condicion, entrara solo si esta es verdadera
-if(n>3)
-	 //Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	 printf("\n\tEl numero %d es mayor a 3", n); 
-    
-  //segunda condicion, entrara solo si esta es verdadera
-if(n>r){
-		 //Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	  printf("\n\tEl numero %d es mayor a %d ", n, r);
-  }
-
-//tercera condicion, entrara solo si esta es verdadera
-if(m!=r)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	printf("\n\tEl numero %d y el numero %d son diferentes", m, r);
-
-//Cuarta condicion, entrara solo si esta es verdadera
-if(n==3)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	printf("\n\tEl numero %d es igual a 3", n);
-
-
-//Quinta condicion, entrara solo si esta es verdadera
-if(n*m==15)
-	//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-printf("\n\tLa multiplicacion de  %d y %d es igual a 15", n, m);
-	
-	
-	//Sexta condicion, entrara solo si esta es verdadera
-	//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-if(r/m<n)
-		printf("\n\tLa divicion de %d y %d es menor a %d", r, m, n);
-	
-	//septima condicion, entrara solo si esta es verdadera
-if(r/m==-10)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tLa divicion de %d y %d es igual a -10", r, m);
-
-
-	//octava condicion, entrara solo si esta es verdadera
-if(n+m+r==5)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tLa suma de %d, %d y %d es igual a 5", n, m, r);
-	
-	//novena condicion, entrara solo si esta es verdadera
-if(n+m==8 && n-m==2)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-	 printf("\n\tla suma de %d y %d es igual a 8 ademas de la resta de %d y %d es igual a 2", n, m, n, m);
-
-
-	//decima condicion, entrara solo si esta es verdadera 
-if(n+m==8 || n-m==6 )
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tla suma de %d y %d es igual a 8 ademas de la resta de %d y %d es igual a 6", n, m, n, m);
-
-
-	//decimoprimera condicion, entrara solo si esta es verdadera
-	if(n>3 && m>3 && r<3)
-		//Mosrara a pantalla el numero y la codicion propuesta si esto es verdadero
-		printf("\n\tEl numero %d es mayor a 3, el numero %d es mayor a tres y el numero %c es menor a 3", n, m, r);
-	return 0;
+int b; //Inicializacion de la variable
+printf("\n\n\n\tIngrese un dia de la semana:");//Pide al usuario que ingrese un dia de la semana
+scanf("%d", &b);//Captura el dato que a ingresado el usuario
+switch(b){//Evaluacion de los casos, si alguno de los datos dados se encuentran en los casos del comando este entrara
+	case 1: {//Entrada al primer caso
+		printf("\n\tEl dia de la semana que a ingresado es: Lunes");//Muestra en pantalla el primer dia de la semana
+		break;//finalizacion del caso 1 (ya no entra a ningun otro caso
+	}
+case 2:{//Entrada al segundo caso
+	printf("\n\tEl dia de la semana que a ingresado es: Martes");//Muestra en pantalla el segundo dia de la semana
+	break;//Finalizacion del caso 2 (ya no entra a ningun otro caso)
+}
+case 3:{//Entrada al tercer caso
+	printf("\n\tEl dia de la semana que a ingresado es: Miercoles");//Muestra en pantalla el tercer dia de la semana
+	break;//Finalizacion del caso 3 (ya no entra a ningun otro caso)
+}
+case 4:{//Entrada al cuarto caso
+	printf("\n\tEl dia de la semana que a ingresado es: Jueves");//Muestra en pantalla el cuarto dia de la semana
+	break;//Finalizacion del caso 4 (ya no entra a ningun otro caso)
+}
+case 5:{//Entrada al quinto caso
+	printf("\n\tEl dia de la semana que a ingresado es: Viernes");//Muestra en pantalla el quinto dia de la semana
+	break;//Finalizacion del caso 5 (ya no entra a ningun otro caso)
+}
+case 6:{//Entrada al sexto caso
+	printf("\n\tEl dia de la semana que a ingresado es: Sabado");//Muestra en pantalla el sexto dia de la semana
+	break;//Finalizacion del caso 6 (ya no entra a ningun otro caso)
+}
+case 7:{ //Entrada al septimo caso
+	printf("\n\tEl dia de la semana que a ingresado es: Domingo");//Muestra en pantalla el septimo dia de la semana
+	break;//Finalizacion del caso 7 (ya no entra a ningun otro caso)
+}
+default://entra al no haber ningun caso que pueda ser evaluado con lo que a introducido el usuario
+printf("\n\tERROR: Dia incorrecto");//Muestra en pantalla que el numero introducido en pantalla no es uno de la semana
 }
 
 
 
 
+
+//Actividad Extra
+int c; //Inicializacion de la variable tipo entera
+printf("\n\n\n\tIngrese una opcion:\n\t1\n\t2\n\t3\n\t4\n\t5\n\t");//Pide por teclado que ingrese alguna de las opciones
+scanf("%d", &c);//Captura la opcion que a introducido el usuario
+switch(c){//Evaluacion de los casos, si alguno de los datos dados se encuentran en los casos del comando este entrara
+	case 1:{//Entrada al primer caso
+		printf("\n\tUsted a ingresado la opcion 1");//Muestra en pantalla la opcion introducida por el usuario
+		break;//Finalizacion del caso 1 (ya no entra a ningun otro caso)
+	}
+	case 2:{//Entrada al segundo caso
+		printf("\n\tUsted a ingresado la opcion 2");//Muestra en pantalla la opcion introducida por el usuario
+		break;//Finalizacion del caso 2 (ya no entra a ningun otro caso)
+	}
+	case 3:{//Entrada al tercer caso
+		printf("\n\tUsted a ingresado la opcion 3");//Muestra en pantalla la opcion introducida por el usuario
+		break;//Finalizacion del caso 3 (ya no entra a ningun otro caso)
+	}
+	case 4:{//Entrada al cuarto caso
+		printf("\n\tUsted a ingresado la opcion 4");//Muestra en pantalla la opcion introducida por el usuario
+		break;//Finalizacion del caso 4 (ya no entra a ningun otro caso)
+	}
+	case 5:{//Entrada al quinto caso
+		printf("\n\tUsted a ingresado la opcion 5");//Muestra en pantalla la opcion introducida por el usuario
+		break;//Finalizacion del caso 5 (ya no entra a ningun otro caso)
+	}
+}
+	return 0;
+}
