@@ -1,58 +1,32 @@
-//Macias Zuñiga Grecia Sofia mat: 1852097 horario: viernes 7:00am - 9:00am 13/09/2019
-//Practica 6
+//Macias Zuñiga Grecia Sofia mat: 1852097 horario: viernes 7:00am - 9:00am 20/09/2019 grupo #006
+//Practica 7
 //Actividad 1
 #include <stdio.h>
+#include <math.h>
 int main(){
-	//inicializacion de las variables
-	int a, b; 
-	char s;
-	//se seguira haciendo esto hasta que el while sea falso
-		do{
-		printf("\n\tIngrese un numero entero:"); //muestra por pantalla que el usuario ingrese un numero entero
- 	scanf("%d", &a); //captura la variable que a introducido el usuario
- 	fflush(stdin); //limpia la variable siguiente ya que el al pomnerle enter se queda como caracter guardado de el siguiente dato a pedir
- 	 b+=a; //hace la sumatoria de los numeros que a ingresado el usuario
- 	printf("\n\t%cQuisiera ingresar otro numero%c: N-No S-Si:", 168, 63); //muestra por pantalla la pregunta al usuario para seguir continuando con el ciclo
-		scanf("%c", &s);//captura la opcion del usuario para evaluarla y saber si continuara el ciclo o no
+	int i, x, y, z; //Inicializacion de las variables
+	for(i=0; i<10; i++){ //ciclo que repite desde un numero iniciado hasta la cantidad que se indica que se debe repetir
+		printf("\n\tIngrese la calificacion del alumno:"); //muestra y pide por pantalla que el usuario ingrese una calificacion
+		scanf("%d", &x); //captura la calificacion que el usuario a dado
+		y+=x; //suma las calificaciones que a dado el usuario
 	}
-		//Mientras esta evaluacion de la opcion que a ingresado el usuario se cumpla
-	while(s=='S');
-
-	printf("\n\tLa sumatoria es: %d", b);//muestra en pantalla la sumatoria de todos los numeros imgresdo por el usuario
-printf("\n\n\n\n"); //espacios para mostrar la siguiente actividad hecha
-
-//Actividad 2
-//inicializacion de la variable
-int i; 
-//se seguira haciendo esto hasta que el while sea falso
-do{
-		fflush(stdin); //limpia la variable siguiente ya que el al pomnerle enter se queda como caracter guardado de el siguiente dato a pedir
-printf("\n\tIngrese un numero:"); //muestra por pantalla que el usuario ingrese un numero 
-scanf("%d", &i); //captura la variable que a introducido el usuario
-	printf("\n\tEl numero que a introducido es: %d", i); //muestra en pantalla el numero introducido por el usuario
+	 z=y/10; //da el promedio de las calificaciones dadas que ya han sido sumadas y las divide entre 10 que son el total de calificaciones que se han ingresado
+		if(z>=7){ //si el promedio en total es mayor que 7 entonces se cumplrira la condicion
+			printf("\n\tEl alumno esta Aprobado"); //muestra en pantalla al usuario que el alumno esta aprobado
+		}
+		else //si lo anterior no se cumple entonces hace lo sig
+		printf("\n\tEl alumno esta reprobado"); //muestra en pantalla al usuario que el alumno esta reprobado 
+	 printf("\n\n\n\n"); //espacios para que la actividad dos no se junte en la misma linea que la uno
+	 
+	//Actividad 2
+	int j, b, c, d; //Iniciaizacion de las variables
+	printf("\n\tIngrese un numero base:"); //muestra y pide por pantalla que el usuario ingrese un numero para la base
+	scanf("%d", &b); //captura el numero que el usuario a dado
+	printf("\n\tIngrese un numero  exponente:");  //muestra y pide por pantalla que el usuario ingrese un numero para el exponente
+	scanf("%d", &c); //captura el numero que el usuario a dado
+	for(j=0; j<c; j++){ //ciclo que repite desde un numero iniciado hasta la cantidad que se indica que se debe repetir
+		d=pow(b,c); 
 	}
-	//Mientras la variable ingresada por el usuario sea menor al numero que se a puesto seguira repitiendo los mismos pasos
-	while(i<100);
-	//al teren un numero mayor al puesto en el while muestra en pantalla que el numero ingresado es mayor 
-	printf("\n\tEl numero ingresado es mayor a 100");
-printf("\n\n\n\n");  //espacios para mostrar la siguiente actividad hecha
-
-//Acttividad 2.5
-//inicializacion de la variable
-int j; 
-	fflush(stdin); //limpia la variable siguiente ya que el al pomnerle enter se queda como caracter guardado de el siguiente dato a pedir
-printf("\n\tIngrese un numero:"); //muestra por pantalla que el usuario ingrese un numero 
-scanf("%d", &j); //captura la variable que a introducido el usuario
-//Mientras la variable ingresada por el usuario sea menor al numero que se a puesto seguira repitiendo los mismos pasos
-while(j<100);{
-fflush(stdin);
-	 printf("\n\tIngrese un numero:"); //muestra por pantalla que el usuario ingrese un numero 
-  scanf("%d", &j); //captura la variable que a introducido el usuario
-	 printf("\n\tEl numero que a introducido es: %d", j); //muestra en pantalla el numero introducido por el usuario
-}
-//al teren un numero mayor al puesto en el while muestra en pantalla que el numero ingresado es mayor 
-	printf("\n\tEl numero ingresado es mayor a 100");
-printf("\n\n\n\n\n"); //espacios para mostrar la siguiente actividad hecha
-
+	printf("\n\tEl resultado de %d elevado a %d es: %d", b, c, d); //muestra en pantalla la potencia calculada con los dos numeros dados
 	return 0;
 }
