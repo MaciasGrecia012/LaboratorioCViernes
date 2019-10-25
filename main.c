@@ -8,7 +8,7 @@ int main(){
 	int num, prim, i, x; //inicializacion de las variables de tipo entero
 	 printf("\n\tIngrese un numero mayor que 0 y entero:"); //pide por pantalla qeu el usuario ingrese un numero entero y mayor a 0
 	 scanf("%d", &num);//captura el numero introducido por el usuario
-	 if(num>0){
+	 if(num>0){ //si el numero es mayo a 0 entonces hara lo siguiente
 for(i=0;i<num;i++) //repite desde i hasta el numero
 {
 	prim=num%i; //guarda el residuo de el numero introducido y el numero en el que se encuentra el ciclo
@@ -21,20 +21,20 @@ if(x==2){ //si la variable aumentada es dos ya que solo puede tener dos divisore
 else //sino se cumple lo anterior
     printf("El número no es primo"); //muestra por pantalla que ese numero no es primo
 }
-else 
-printf("\n\tNumero no valido");
-printf("\n\n\n\n");
+else  //si no es mayor a 0 
+printf("\n\tNumero no valido"); //muestra por pantalla al usuario que el numero introducido no esta en el rango autorizado
+printf("\n\n\n\n"); //espacios para separar la actividad 1 de la 2
 		//Actividad 2
 		int num2, pot, num3; //inicializacion de las variables 
 		printf("\n\tIngrese un nummero:"); //pide por pantalla al usuario que introduzca un numero
 		scanf("%d", &num2); //captura el numero ingresado por el usuario
 		printf("\n\tIngrese otro numero:"); //pide por pantalla que el usuario ingrese otro numero
 		scanf("%d", &num3); //captrura el otro numero que a introducido el usuario
-		if(num2>0){ //si el numero
-			pot=pow(num2,num3);
-			printf("\n\tEl numero %d elevado a %d es: %d", num2, num3, pot);
+		if(num2>0){ //si el numero es mayor a 0
+			pot=pow(num2,num3); //calcula el primer numero introducido elevado con el segundo numero
+			printf("\n\tEl numero %d elevado a %d es: %d", num2, num3, pot); //muestra por pantalla los dos numeros introducidos por el usuario y la potencia calculada
 		}
-		else
-		printf("\n\tEl numero no es valido");
+		else //si no es mayor a 0
+		printf("\n\tEl numero no es valido"); //muestra por pantalla que el numero no esta en el rango puesto
 	return 0;
 }
