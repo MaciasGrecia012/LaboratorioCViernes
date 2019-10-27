@@ -82,29 +82,32 @@
 			int puede;      
 			LeerPanda(&mp);      
 			puede=TenerBebes(mp);
-			if(puede==1)           
-			 printf("El panda %s puede tener bebes\n",mp.nombrep);     
-				 else                    
-					printf("El panda %s no puede tener bebes\n",mp.nombrep); 
 					 
-					void LeerPanda(mip *p) {      char nom[35];      printf("El panda se llama: ");      
-					gets(nom);      
+					void LeerPanda(mip *p) {     
+					 char nom[35];     
+					 printf("'n\tIngrese el nombre del panda' ");  //pide al usuario por pantalla que ingrese el nombre del panda    
+					gets(nom);    //captura el nombre ingresado 
 					p->nombrep=(char *)malloc(sizeof(char) * strlen(nom)+1);      
-					if(p==NULL)      {            
-					printf("Insuficiente espacio de memoria\n");           
-					 exit(1);      }      strcpy(p->nombrep,nom);      
-						fflush(stdin);      printf("Su peso es:");     
-						 scanf("%f",&p->peso);      fflush(stdin);      
-							printf("Su anyo de nacimiento es:");     
-			 scanf("%d",&p->anyonac);     
-				 fflush(stdin);      
-					printf("Su sexo es:");     
-					 scanf("%c",&p->sexo); 
+					if(p==NULL){            
+					printf("\n\tInsuficiente espacio de memoria");    //muestra por pantalla que no hay suficiente espacio de memoria   
+					 exit(1);      
+						}      
+						strcpy(p->nombrep,nom);      
+						fflush(stdin);     //limpia la variable 
+						printf("\n\tIngrese el peso del panda:");   //pide al usuario por pantalla que ingrese el peso del panda    
+						 scanf("%f",&p->peso);  //captura el peso ingresado     
+							fflush(stdin);      //limpia la variable
+							printf("\n\tingrese el año de nacimiento ");   //pide al usuario por pantalla que ingrese el año de nacimiento del panda  
+			 scanf("%d",&p->anyonac);     //captura el año ingresado 
+				 fflush(stdin); //limpia la variable     
+					printf("\n\tIngrese el sexo del panda:"); //pide al usuario por pantalla que ingrese el sexo del panda 
+					 scanf("%c",&p->sexo); //captura el sexo ingresado 
 						} 
 						int EdadPanda(mip p) //devuelve la edad
 						{      
 						int edadp;     
-						 edadp=2012 - p.anyonac;      return(edadp); 
+						 edadp=2012 - p.anyonac;      
+							return(edadp); 
 							} int TenerBebes(mip p) //devuelve 1 si puede tener bebes y 0 si no. 
 						      
 						int res,edad;     
@@ -112,7 +115,11 @@
 							 if(edad>=5 && (p.sexo=='f' || p.sexo=='F'))            
 								res=1;     
 								 else            
-									res=0;      
+									res=0; 
+									if(res==1)           
+			      printf("\n\tEl panda %s puede tener bebes",mp.nombrep);     //muestra por pantalla que el panda puede tener bebes
+				      else                    
+					     printf("'n\t'El panda %s no puede tener bebes",mp.nombrep); //muestra por pantalla que el panda no puede tener bebes     
 									return(res); 
 }
 	
