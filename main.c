@@ -68,8 +68,53 @@
 					return 0;
 				}
 				//Actividad 2
-	
-	
+	typedef struct Panda {      
+	char *nombrep;      
+	float peso;      
+	int anyonac;     
+	 char sexo;  
+
+		}mip; 
+		void LeerPanda(mip *p); 
+		int EdadPanda(mip p); //devuelve la edad int TenerBebes(mip p); //devuelve 1 si puede tener bebes y 0 si no.
+		void main() {     
+	 int mip *mp; 
+			int puede;      
+			LeerPanda(&mp);      
+			puede=TenerBebes(mp);
+			if(puede==1)           
+			 printf("El panda %s puede tener bebes\n",mp.nombrep);     
+				 else                    
+					printf("El panda %s no puede tener bebes\n",mp.nombrep); 
+					 
+					void LeerPanda(mip *p) {      char nom[35];      printf("El panda se llama: ");      
+					gets(nom);      
+					p->nombrep=(char *)malloc(sizeof(char) * strlen(nom)+1);      
+					if(p==NULL)      {            
+					printf("Insuficiente espacio de memoria\n");           
+					 exit(1);      }      strcpy(p->nombrep,nom);      
+						fflush(stdin);      printf("Su peso es:");     
+						 scanf("%f",&p->peso);      fflush(stdin);      
+							printf("Su anyo de nacimiento es:");     
+			 scanf("%d",&p->anyonac);     
+				 fflush(stdin);      
+					printf("Su sexo es:");     
+					 scanf("%c",&p->sexo); 
+						} 
+						int EdadPanda(mip p) //devuelve la edad
+						{      
+						int edadp;     
+						 edadp=2012 - p.anyonac;      return(edadp); 
+							} int TenerBebes(mip p) //devuelve 1 si puede tener bebes y 0 si no. 
+						      
+						int res,edad;     
+						 edad=EdadPanda(p);     
+							 if(edad>=5 && (p.sexo=='f' || p.sexo=='F'))            
+								res=1;     
+								 else            
+									res=0;      
+									return(res); 
+}
 	
 
 	
