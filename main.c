@@ -1,42 +1,77 @@
 //Macias Zuñiga Grecia Sofia mat: 1852097 horario: viernes 7:00am - 9:00am 25/10/2019 grupo #006
-//Practica 12
+//Practica 11
 //Actividad 1
 #include <stdio.h>
-#include <math.h>
-#include <string.h>
-int main(){
-	int num, prim, i, x; //inicializacion de las variables de tipo entero
-	 printf("\n\tIngrese un numero mayor que 0 y entero:"); //pide por pantalla qeu el usuario ingrese un numero entero y mayor a 0
-	scanf("%d", &num);//captura el numero introducido por el usuario
-	if(num>=0){ //si el numero es mayo a 0 entonces hara lo siguiente
- for(i=2;i<=num;i++) {//repite desde i hasta el numero
- prim=num%i; //guarda en una variable el residuo
- if(prim==0){ //si el residuo que se gaurdo anteriormente es 0
-	  x++; //inclrementa un contador para los dos numeros divisibles de la variable
-			}//guarda el residuo de el numero introducido y el numero en el que se encuentra el ciclo
+ #include<string.h> 
+	#include<conio.h> 
+	#include<stdlib.h>
+	 #define NN 5 
+		typedef struct {   //inicializacion del struct     
+  char  *nomEst;  // nombre estudiante       
+	int edad;       //edad del estudiante
+		char sexo;      //sexo del estudiante
+	int *notas; //notas del estudiante
+			} estudiante; //finalizacion del struct
+	typedef struct { //inicializacion del segundo struct
+		int numEst; //numero de estudiantes
+		estudiante  *estu; //puntero que liga el anterior struct a este
+		 *rest; 	//la resta del registro de notas
+	}registroNotas; //fin de la estructura
+	void main ( ) {       
+		char nombre[30]; //inicializacion de la variable tipo char para los nombres
+	 int  i,n,sumnot=0,indicemay=0;      //inicializacion de las variables tipo enteras
+	 float prom,mayorp=0; //inicializacion de las variables tipo flotantes
+	 printf ("\n\t%cCuantos estudiantes desea ingresar%c", 168, 63); //pregunta por pantalla cuantos alumnos desea ingresar
+		scanf ("%d", &rest.numest);       //captura por pantalla lo que a ingresado el usuario
+		rest.estu=(Estudiante *) malloc(rest.numest * sizeof(Estudiante)); //
+		if(rest.estu==NULL){      //si la variable puesta es igual a nul entonces       
+			printf("\n\tInsuficiente Espacio de Memoria"); //muestra por pantalla que no hay suficiente espacio
+				exit(1);//sale de la funcion
 		}
-  if(x==2) {//si el residuo que se gaurdo anteriormente es 0
-  printf("\n\tEl numero es primo"); //muestra por pantalla que el numero es primo
- }
- else
-    printf("\n\tEl nnmero no es primo"); //muestra por pantalla que ese numero no es primo
-  }
-else  //si no es mayor a 0 
-printf("\n\tNumero no valido"); //muestra por pantalla al usuario que el numero introducido no esta en el rango autorizado
-printf("\n\n\n\n"); //espacios para separar la actividad 1 de la 2
-		//Actividad 2
-		int num2, pot, num3; //inicializacion de las variables 
-		fflush(stdout);
-		printf("\n\tIngrese un nummero:"); //pide por pantalla al usuario que introduzca un numero
-		scanf("%d", &num2); //captura el numero ingresado por el usuario
-		printf("\n\tIngrese otro numero:"); //pide por pantalla que el usuario ingrese otro numero
-		scanf("%d", &num3); //captrura el otro numero que a introducido el usuario
-		if(num2>0){ //si el numero es mayor a 0
-			pot=pow(num2,num3); //calcula el primer numero introducido elevado con el segundo numero
-			printf("\n\tEl numero %d elevado a %d es: %d\n", num2, num3, pot); //muestra por pantalla los dos numeros introducidos por el usuario y la potencia calculada
-		}
-		else //si no es mayor a 0
-		printf("\n\tEl numero no es valido\n"); //muestra por pantalla que el numero no esta en el rango puesto
-		system("pause");
-	return 0;
-}
+		 for(i=0; i<rest.numest; i++){ //desde i hasta la variable dada             
+			printf ("\n\tIngrese el nombre del alumno %d: ",i+1);//pide por pantalla que se ingrese el nombre del estudiante   
+			fflush(stdin); //limpia la variable
+			gets(Nombre); //captura lo que a introducido el usuario
+			rest.estu[i].nomest=(char *)malloc(sizeof (char) * (strlen(Nombre)+1));   
+			strcpy (rest.estu[i].nomest, Nombre);             
+			printf ("\n\tIngrese la edad del alumno %d: ",i+1);  //pide por pantalla que se ingrese la edad del estudiante             
+			fflush(stdin);   //limpia la variable          
+			scanf ("%d",&rest.estu[i].edad);    //captura lo que a introducido el usuario         
+			printf ("\n\tIngrese el sexo del alumno %d: ", i+1);   //pide por pantalla que se ingrese el sexo del estudiante           
+			 fflush(stdin);     //limpia la variable        
+				scanf ("%c",&rest.estu[i].sexo); //captura lo que a introducido el usuario           
+				rest.estu[i].notas=(int *)malloc(NN *sizeof(int));            
+			 if(rest.estu[i].notas==NULL){ //si la vaiable es igual a null                   
+				printf("\n\tInsuficiente Espacio de Memoria"); //muestra por pantalla que no hay suficiemte espacio en la memoria
+				exitt(1); //sale de la funcion
+				}             
+				printf("\n\tLas 5 calificaciones del estudiante %d son",i+1);   //muestra or pantalla cuales son las calificaciones          
+				sumnot=0;   //hace la sumatoria total igual a 0          
+				prom=0;   //hace el promedio igual a 0
+				 for(n=0;n<5;n++) {                  
+					 printf("\n\tIngrese la nota %d",n+1, );  //pide por pantalla que el usuario ingrese las notas        
+						scanf("%d",&rest.estu[i].notas[n]); //captura cada una de las notas y las guarda en un arreglo
+				 sumnot+=rest.estu[i].notas[n];             //suma todas las notas i ngresadas
+					 }             
+						prom=sumnot/5; //calcula el promedio de las cinco calificaciones dadas
+						if(prom>mayorp){ //si el promedio es mayor a la variable ya guardada                   
+						indicemay=i; // hace el indice mayor igual a la posicion en que se encuentra
+	     mayorp=prom; //iguala la variable con el promedio guardando el mayor
+						}       
+						} 
+						printf("\n\tEl estudiante con mayor promedio es:%s",rest.estu[indicemay].nomest); //muestra por pantalla el nombre del estudiante con mayor promedio
+						free(nomest); //termina el melloc
+						free(estu);  //termina el melloc
+						free(notas); //termina el melloc
+						getche();
+					system ("pause");
+					return 0;
+				}
+				//Actividad 2
+	
+	
+	
+
+	
+
+
