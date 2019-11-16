@@ -28,6 +28,25 @@ int main(){
 	fclose(fichero);//cerramos el primer archivo
 	fclose(fichero2);//cerramos el segundo archivo
 	
+	
+	
+	//Actividad 2
+	FILE *fich;  //Declaramos el puntero tipo FILE
+	int a, b, suma;//Declaramos nuestras variables
+	fich = fopen("Numeros.txt", "r"); //abrimos nuestro archivo en modo lectura
+	if(fich==NULL){
+		printf("\n\t El fichero no se encuentra");
+	} else{
+		fscanf(fich,"%d",&a);//leemos el primer numero del archivo
+		fscanf(fich, "%d", &b);//leemos el segundo numero del archivo
+		fclose(fich);//Cerramos el archivo
+		suma = a+b;//Se realiza la suma de a y b
+		FILE *fich2; //Declaramos el puntero tipo FILE
+		fich2 = fopen("resultado.txt", "w+");//abrimos nuestro archivo en modo de escritura
+		fprintf(fich, "La suma de %d y %d es: %d", a, b, suma);//Se imprime la cadena en el archivo
+		fclose(fich2);//Cerramos el archivo
+	}
+	
 	return 0;
 }
 
